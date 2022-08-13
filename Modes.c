@@ -452,29 +452,8 @@ void Enable_AWT_Accelerometer(void)
 	Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_WAKE_UP_DUR, 0x80);
 	Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_FREE_FALL, 0xA0);
 
-	//Testing
-	//Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_FREE_FALL, 0x0A);
-
 	//routing free fall interrupt to int1 pin
 	Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_MD1_CFG, 0x10);
-
-
-	/*
-	Tilt Interrupt
-	Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_MD1_CFG, 0x02);
-
-	Free Fall interrupt
-	//enable free fall function
-	Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_TAP_CFG1, 0x80);
-
-	//FF time of 1 sec. Threshold is the minimum default
-	Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_WAKE_UP_DUR, 0x80);
-	Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_FREE_FALL, 0xA0);
-
-	//routing free fall interrupt to int1 pin
-	Set_Register(LSM6DSL_ACC_GYRO_I2C_ADDRESS_LOW, LSM6DSL_ACC_GYRO_MD1_CFG, 0x10);
-	*/
-
 }
 
 
